@@ -13,7 +13,7 @@ Example Input: "scrimba"
 Example Output: "Scrimba"
 
 Hint: Trying using slice() and .toUpperCase()
-*/
+*/ 
 
 function capitalizeWord(word){
     const firstUpperLetter = word.slice(0,1).toUpperCase()
