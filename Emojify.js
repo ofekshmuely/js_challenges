@@ -10,14 +10,13 @@ code rather than searching for an emoji from a list.
 For example, typing :smile: will replace that text with 😊 
 
 */
-
 const emojis = {
     "smile": "😊",
     "angry": "😠",
     "party": "🎉",
     "heart": "💜",
-    "cat":   "🐱",
-    "dog":   "🐕"
+    "cat": "🐱",
+    "dog": "🐕"
 }
 
 /* 1. Write a function that checks if a lowercase word starts and 
@@ -34,14 +33,14 @@ Example output: "flower"
 
 Example input: "elephant"
 Example output: "elephant"
-*/ 
+*/
 
-function emojifyWord(word){
+function emojifyWord(word) {
     const result = Object.entries(emojis).flat();
     const myword = word.split(':')[1]
-    const mywordIndex = result.indexOf(myword)+1
-    
-    return result.includes(myword) ? result[mywordIndex]:word
+    const mywordIndex = result.indexOf(myword) + 1
+
+    return result.includes(myword) ? result[mywordIndex] : word
 
 }
 
@@ -55,21 +54,23 @@ Example output: "I 💜 my 🐱"
 
 Example input: "I :heart: my elephant"
 Example output: "I 💜 my elephant"
-*/ 
+*/
 
-function emojifyPhrase(phrase){
+function emojifyPhrase(phrase) {
     const myPhrase = phrase.split(' ')
-   return myPhrase.map(item=>{return emojifyWord(item)}).join(" ")
+    return myPhrase.map(item => {
+        return emojifyWord(item)
+    }).join(" ")
 }
 
 
 
- console.log(emojifyWord(":heart:"));  // 💜
-  console.log(emojifyWord(":party:")); // 🎉
- console.log(emojifyWord(":flower:")); // :flower:
- console.log(emojifyWord("elephant")); // elephant
- 
- console.log(`----`)
+console.log(emojifyWord(":heart:")); // 💜
+console.log(emojifyWord(":party:")); // 🎉
+console.log(emojifyWord(":flower:")); // :flower:
+console.log(emojifyWord("elephant")); // elephant
 
- console.log(emojifyPhrase("I :heart: my :cat:")); // I 💜 my 🐱
- console.log(emojifyPhrase("I :heart: my :elephant:")); // I 💜 my :elephant:
+console.log(`----`)
+
+console.log(emojifyPhrase("I :heart: my :cat:")); // I 💜 my 🐱
+console.log(emojifyPhrase("I :heart: my :elephant:")); // I 💜 my :elephant:
