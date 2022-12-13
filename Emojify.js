@@ -1,6 +1,6 @@
 /*  Emojify!
 
-Popular services like Slack and Github allow for emoji shortscodes, meaning 
+Most Popular services like Slack and Github allow for emoji shortscodes, meaning 
 they will detect when a word in a sentence begins and ends with a colon (:)
 and automatically replace that word with an emoji. 
 
